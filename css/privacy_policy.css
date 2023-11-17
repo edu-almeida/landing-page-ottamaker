@@ -1,0 +1,97 @@
+
+:root {
+    --Dark-Slate-Gray: #111420;
+    --Dark-Slate-Blue: #2D313D;
+    --Dark-Olive-Green: #5F6575;
+    --White-Smoke: #FDFDFD;
+    --Orange-Red: #FF635C;
+    --font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background: var(--Orange-Red);
+}
+
+.img {
+    aspect-ratio: 1.09;
+    object-fit: contain;
+    object-position: center;
+    width: 227px;
+    overflow: hidden;
+    align-self: center;
+    margin-top: 100px;
+    max-width: 100%;
+}
+
+.main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: var(--Orange-Red);
+}
+
+@media (max-width: 991px) {
+    .main {
+        padding: 0 20px;
+    }
+}
+
+.main-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--White-Smoke);
+}
+
+h2 {
+    margin: 32px 24px 0 0;
+}
+
+.container {
+    align-self: stretch;
+    border-radius: 50px 50px 0 0;
+    background-color: var(--White-Smoke);
+    display: flex;
+    flex-direction: column;
+    margin: 0 100px;
+    padding: 50px 100px 50px;
+}
+
+@media (max-width: 991px) {
+    .container {
+        max-width: 100%;
+        margin: 0 50px;
+        padding: 0 50px 20px;
+    }
+}
+
+.links {
+    color: var(--Orange-Red);
+    text-decoration: none;
+}
+
+.links:hover {
+    background-color: var(--Orange-Red);
+    color: var(--White-Smoke);
+
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Aplicar a animação durante o hover */
+.links:hover {
+    animation: hoverAnimation 0.5s ease;
+}
